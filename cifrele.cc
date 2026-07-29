@@ -3,13 +3,13 @@ using namespace std;
 
 int main()
 {
-    int n;
+    int n, ogl = 0;
     cin >> n;
-
     while(n != 0)
     {
-        int uc = n % 10;
-        cout << uc << " ";
+        ogl = ogl * 10 + n % 10;
         n /= 10;
     }
+    cout << ogl << endl;
+    return 0;
 }
