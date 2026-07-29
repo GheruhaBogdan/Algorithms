@@ -3,13 +3,22 @@ using namespace std;
 
 int main()
 {
-    int n, ogl = 0;
-    cin >> n;
-    while(n != 0)
+  int n, r = 0, p = 1;
+  cin >> n;
+  while (n != 0)
+  {
+    int uc = n % 10;
+    if(uc % 2 == 0)
     {
-        ogl = ogl * 10 + n % 10;
-        n /= 10;
+        r = r + p * uc;
     }
-    cout << ogl << endl;
-    return 0;
+    else
+    {
+        r = r + p * (uc - 1);
+    }
+    p = p * 10;
+    n = n / 10;
+  }
+  cout << r << endl;
+  return 0;
 }
