@@ -4,20 +4,16 @@ using namespace std;
 int main()
 {
     int a, b;
+   
     cin >> a >> b;
-
-    while(a != b)
+    while(b != 0)
     {
-        if(a > b)
-        {
-            a = a - b;
-        }
-        else
-        {
-            b = b - a;
-        }
+        int r = a % b;
+        a = b;
+        b = r;
     }
-
+    
     cout << a;
     return 0;
+
 }
